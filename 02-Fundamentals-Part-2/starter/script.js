@@ -149,16 +149,47 @@
 // console.log(ages);
 
 
-const friends = ['Emmanuel', 'Fikayo', 'Ogechi'];
-friends.push('Eromosele'); //add element to the end of the array
-console.log(friends);
+// const friends = ['Emmanuel', 'Fikayo', 'Ogechi'];
+// friends.push('Eromosele'); //add element to the end of the array
+// console.log(friends);
 
-friends.unshift('Victor'); //add element to the beginning of the array
-console.log(friends);
+// friends.unshift('Victor'); //add element to the beginning of the array
+// console.log(friends);
 
-friends.pop(); //remove an element at the end of the array
-console.log(friends);
+// friends.pop(); //remove an element at the end of the array
+// console.log(friends);
 
-friends.shift(); //remove first element of the array
-console.log(friends);
+// friends.shift(); //remove first element of the array
+// console.log(friends);
+
+// console.log(friends.indexOf('Fikayo'));
+// console.log(friends.indexOf('Ogechi'));
+
+
+// console.log(friends.includes('Emmanuel'))
+// console.log(friends.includes('Ryan'))
+
+// if (friends.includes('Emmanuel')) {
+//     console.log('You have a friend called Emmanuel');
+// }
+
+//OBJECTS
+
+const EmmanuelArray = [
+    'Emmanuel',
+    'Fikayo',
+    2037 - 1990,
+    'Software Engineer',
+    ['Victor', 'Ogechi', 'Eromosele']
+];
+
+const profile = {
+    firstName: 'Fikayo',
+    lastName: 'Victor',
+    age: 2037 - 1990,
+    job: 'teacher',
+    friends: ['Patrick', 'Ugo', 'Obadaye']
+};
+
+
 
