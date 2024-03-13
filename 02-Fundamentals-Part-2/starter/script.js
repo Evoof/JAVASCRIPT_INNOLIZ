@@ -175,40 +175,80 @@
 
 //OBJECTS
 
-const EmmanuelArray = [
-    'Emmanuel',
-    'Fikayo',
-    2037 - 1990,
-    'Software Engineer',
-    ['Victor', 'Ogechi', 'Eromosele']
-];
+// const EmmanuelArray = [
+//     'Emmanuel',
+//     'Fikayo',
+//     2037 - 1990,
+//     'Software Engineer',
+//     ['Victor', 'Ogechi', 'Eromosele']
+// ];
+
+// const profile = {
+//     firstName: 'Fikayo',
+//     lastName: 'Victor',
+//     age: 2037 - 1990,
+//     job: 'Softwware Engineer',
+//     friends: ['Patrick', 'Ugo', 'Obadaye']
+// };
+// console.log(profile);
+
+// console.log(profile.lastName);
+// console.log(profile['lastName']);
+
+// const nameKey = 'Name';
+// console.log(profile['first' + nameKey]);
+// console.log(profile['last' + nameKey]);
+
+
+// const interestedIn = prompt('wWhat do you want to know about Emmanuel? Choose between fistName, lastName, age, job and friends');
+// console.log(profile[interestedIn]);
+
+// if (profile[interestedIn]) {
+//     console.log(profile[interestedIn]);
+// } else {
+//     console.log('Wrong request!! Choose between fistName, lastName, age, job and friends');
+// }
+
+// profile.location = 'Nigeria';
+// profile['twitter'] = '@confirm_evoo';
+// console.log(profile);
+
+// console.log(`${profile.firstName} has ${profile.friends.length}, friends, and is best friend is called ${profile.friends[0]}`)
 
 const profile = {
-    firstName: 'Fikayo',
-    lastName: 'Victor',
-    age: 2037 - 1990,
-    job: 'Softwware Engineer',
-    friends: ['Patrick', 'Ugo', 'Obadaye']
-};
-console.log(profile);
+        firstName: 'Fikayo',
+        lastName: 'Victor',
+        birthYear: 1991,
+        job: 'Softwware Engineer',
+        friends: ['Patrick', 'Ugo', 'Obadaye'],
+        hasDriversLicense: true,
 
-console.log(profile.lastName);
-console.log(profile['lastName']);
+        // calcAge: function(birthYear) {
+        //     return 2031 - birthYear;
+        // }
 
-const nameKey = 'Name';
-console.log(profile['first' + nameKey]);
-console.log(profile['last' + nameKey]);
+        // calcAge: function() {
+        //     console.log(this);
+        //     return 2031 - this.birthYear;
+        // }
+
+        calcAge: function () {
+            this.age = 2031 - this.birthYear;
+            return this.age;
+        },
+
+        getSummary: function () {
+            return `${this.firstName} is a ${this.calcAge()} -year old ${profile.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's License.`
+        }
+    };
+
+    console.log(profile.calcAge());
+
+    console.log(profile.age);
+    console.log(profile.age);
+    console.log(profile.age);
 
 
-const interestedIn = prompt('wWhat do you want to know about Emmanuel? Choose between fistName, lastName, age, job and friends');
-console.log(profile[interestedIn]);
+    // console.log(profile['calcAge'](1991));
 
-if (profile[interestedIn]) {
-    console.log(profile[interestedIn]);
-} else {
-    console.log('Wrong request!! Choose between fistName, lastName, age, job and friends');
-}
-
-profile.location = 'Nigeria';
-profile['twitter'] = '@confirm_evoo';
-console.log(profile);
+    console.log(profile.getSummary);
