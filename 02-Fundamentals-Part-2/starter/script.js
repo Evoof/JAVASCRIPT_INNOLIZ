@@ -301,6 +301,37 @@ const emmanuelArray = [
     false
 ];
 
+const types = [];
+
 for (let i = 0; i < emmanuelArray.length; i++){
     console.log(emmanuelArray[i], typeof emmanuelArray[i]);
+
+    types[i] = typeof emmanuelArray[i];
+}
+
+console.log(types);
+
+const years = [1991, 1998, 2002, 2021];
+const age = [];
+
+for (let i = 0; i < years.length; i++) {
+   age.push (2030 - years[i]);
+}
+
+console.log(age);
+
+//CONTINUE AND BREAK
+
+console.log('---ONLY STRINGS---')
+for (let i = 0; i = emmanuelArray.length; i++) {
+   if (typeof emmanuelArray[i] !== 'string') continue;
+
+   console.log(emmanuelArray[i], typeof  emmanuelArray[i]);
+}
+
+console.log('---BREAK---')
+for (let i = 0; i = emmanuelArray.length; i++) {
+   if (typeof emmanuelArray[i] === 'number') break;
+
+   console.log(emmanuelArray[i], typeof  emmanuelArray[i]);
 }
