@@ -169,13 +169,20 @@
 // console.log(friends.includes('Emmanuel'))
 // console.log(friends.includes('Ryan'))
 
+// friends.push(23);
+// console.log(friends.includes('Emmanuel'));
+// console.log(friends.includes('Ryan'));
+// console.log(friends.includes('23'));
+
+
+
 // if (friends.includes('Emmanuel')) {
 //     console.log('You have a friend called Emmanuel');
 // }
 
 //OBJECTS
 
-// const EmmanuelArray = [
+// const emmanuelArray = [
 //     'Emmanuel',
 //     'Fikayo',
 //     2037 - 1990,
@@ -215,13 +222,13 @@
 
 // console.log(`${profile.firstName} has ${profile.friends.length}, friends, and is best friend is called ${profile.friends[0]}`)
 
-const profile = {
-        firstName: 'Fikayo',
-        lastName: 'Victor',
-        birthYear: 1991,
-        job: 'Softwware Engineer',
-        friends: ['Patrick', 'Ugo', 'Obadaye'],
-        hasDriversLicense: true,
+// const profile = {
+//         firstName: 'Fikayo',
+//         lastName: 'Victor',
+//         birthYear: 1991,
+//         job: 'Softwware Engineer',
+//         friends: ['Patrick', 'Ugo', 'Obadaye'],
+//         hasDriversLicense: true,
 
         // calcAge: function(birthYear) {
         //     return 2031 - birthYear;
@@ -232,23 +239,68 @@ const profile = {
         //     return 2031 - this.birthYear;
         // }
 
-        calcAge: function () {
-            this.age = 2031 - this.birthYear;
-            return this.age;
-        },
+    //     calcAge: function () {
+    //         this.age = 2031 - this.birthYear;
+    //         return this.age;
+    //     },
 
-        getSummary: function () {
-            return `${this.firstName} is a ${this.calcAge()} -year old ${profile.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's License.`
-        }
-    };
+    //     getSummary: function () {
+    //         return `${this.firstName} is a ${this.calcAge()} -year old ${profile.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's License.`
+    //     }
+    // };
 
-    console.log(profile.calcAge());
+    // console.log(profile.calcAge());
 
-    console.log(profile.age);
-    console.log(profile.age);
-    console.log(profile.age);
+    // console.log(profile.age);
+    // console.log(profile.age);
+    // console.log(profile.age);
 
 
     // console.log(profile['calcAge'](1991));
 
-    console.log(profile.getSummary);
+    // console.log(profile.getSummary());
+
+    // function addition(a, b, c) {
+    //     return a + b + c;
+    // }
+
+    // const numberAddition = addition(2, 5, 10);
+    // console.log(numberAddition);
+
+    // function findAverage(a, b, c) {
+    //     return (a + b + c) / 3;
+    // }
+
+    // console.log(findAverage(10, 10, 10));
+
+    // function twoNumbers(a, b) {
+    //     return a / b;
+    // }
+
+    // console.log(twoNumbers('two', 5));
+
+    //LOOPS
+
+    //for Loops keeps running while the condition is true
+
+    // for (let rep = 1; rep <= 10; rep++) {
+    //     console.log('Writing codes everyday');
+    // }
+
+    // for (let rep = 1; rep <= 10; rep++) {
+    //     console.log(`Writing codes everyday ${rep}`);
+    // }
+
+
+const emmanuelArray = [
+    'Emmanuel',
+    'Fikayo',
+    2037 - 1990,
+    'Software Engineer',
+    ['Victor', 'Ogechi', 'Eromosele'],
+    false
+];
+
+for (let i = 0; i < emmanuelArray.length; i++){
+    console.log(emmanuelArray[i], typeof emmanuelArray[i]);
+}
