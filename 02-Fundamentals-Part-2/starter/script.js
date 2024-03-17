@@ -292,46 +292,87 @@
     // }
 
 
-const emmanuelArray = [
-    'Emmanuel',
-    'Fikayo',
-    2037 - 1990,
-    'Software Engineer',
-    ['Victor', 'Ogechi', 'Eromosele'],
-    false
-];
+// const emmanuelArray = [
+//     'Emmanuel',
+//     'Fikayo',
+//     2037 - 1990,
+//     'Software Engineer',
+//     ['Victor', 'Ogechi', 'Eromosele'],
+//     false
+// ];
 
-const types = [];
+// const types = [];
 
-for (let i = 0; i < emmanuelArray.length; i++){
-    console.log(emmanuelArray[i], typeof emmanuelArray[i]);
+// for (let i = 0; i < emmanuelArray.length; i++){
+//     console.log(emmanuelArray[i], typeof emmanuelArray[i]);
 
-    types[i] = typeof emmanuelArray[i];
-}
+//     types[i] = typeof emmanuelArray[i];
+// }
 
-console.log(types);
+// console.log(types);
 
-const years = [1991, 1998, 2002, 2021];
-const age = [];
+// const years = [1991, 1998, 2002, 2021];
+// const age = [];
 
-for (let i = 0; i < years.length; i++) {
-   age.push (2030 - years[i]);
-}
+// for (let i = 0; i < years.length; i++) {
+//    age.push (2030 - years[i]);
+// }
 
-console.log(age);
+// console.log(age);
 
 //CONTINUE AND BREAK
 
-console.log('---ONLY STRINGS---')
-for (let i = 0; i = emmanuelArray.length; i++) {
-   if (typeof emmanuelArray[i] !== 'string') continue;
+// console.log('---ONLY STRINGS---')
+// for (let i = 0; i = emmanuelArray.length; i++) {
+//    if (typeof emmanuelArray[i] !== 'string') continue;
 
-   console.log(emmanuelArray[i], typeof  emmanuelArray[i]);
-}
+//    console.log(emmanuelArray[i], typeof  emmanuelArray[i]);
+// }
 
-console.log('---BREAK---')
-for (let i = 0; i = emmanuelArray.length; i++) {
-   if (typeof emmanuelArray[i] === 'number') break;
+// console.log('---BREAK---')
+// for (let i = 0; i = emmanuelArray.length; i++) {
+//    if (typeof emmanuelArray[i] === 'number') break;
 
-   console.log(emmanuelArray[i], typeof  emmanuelArray[i]);
-}
+//    console.log(emmanuelArray[i], typeof  emmanuelArray[i]);
+// }
+
+
+//LOOPING BACKWWARDS AND LOOPS IN LOOPS
+// const emmanuelArray = [
+//         'Emmanuel',
+//         'Fikayo',
+//         2037 - 1990,
+//         'Software Engineer',
+//         ['Victor', 'Ogechi', 'Eromosele'],
+//     ];
+
+//     //0, 1, ..., 4
+//     //4, 3, ..., 0
+
+//     for (let coding = 1; coding < 5; coding++) {
+//         console.log(`Writing code ${coding}`);
+        
+//         for (let rep = 1; rep < 4; rep++) {
+//             console.log(`JavaScrip is really interesting ${rep}`);
+//         }
+//     }
+
+    //THE WHILE LOOP
+
+    for (let rep = 1; rep <=5; rep++) {
+        console.log('Reading my Bible everyday');
+    }
+
+    let rep = 1;
+    while (rep <= 5) {
+        console.log('Reading my Bible everyday');
+        rep++;
+    }
+
+    let dice = Math.trunc(Math.random() * 6) + 1;
+    
+    while (dice !== 6) {
+        console.log(`You rolled a ${dice}`);
+        dice = Math.trunc(Math.random() * 6) + 1;
+        if  (dice === 6) console.log(`${dice} at last`);
+    }
