@@ -4,7 +4,7 @@
 //PROBLEM
 // WWWe worwk for a company building a smart home thermometer. Our most recent task is this: 'Given an array of temperature of one day, calcuulate the temperature amplitude. Keep in mind that sometimes there might be a sensor error'
 
-const temperature = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
+
 
 //1. Understanding the problem
 // - What is temp amplitude? Answer: difference between the highest and lowest temperature.
@@ -18,15 +18,42 @@ const temperature = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 // - Subtract min from max (amplitude) and return it.
 
 
-const temperatureAmp = function(temps) {
+const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
+
+const temperatureAmp = function (temps) {
     let max = temps[0];
     let min = temps[0];
 
     for (let i = 0; i < temps.length; i++) {
+        const presentTemp = temps[i];
+        if (typeof presentTemp !== 'number') continue;
 
-        if (temps[i] > max) max = temps[i];
-        if (temps[i] < max) min = temps[i];
+        if (presentTemp > max) max = presentTemp;
+        if (presentTemp < min) min = presentTemp;
     }
     console.log(max, min);
-}
+    return max - min;
+};
+const amplitude =temperatureAmp(temperatures);
+console.log(amplitude);
 
+
+const temperatureAmp2 = function (a, b) {
+    const temps = a.concat(b);
+    console.log(temps);
+
+    let max = temps[0];
+    let min = temps[0];
+
+    for (let i = 0; i < temps.length; i++) {
+        const presentTemp = temps[i];
+        if (typeof presentTemp !== 'number') continue;
+
+        if (presentTemp > max) max = presentTemp;
+        if (presentTemp < min) min = presentTemp;
+    }
+    console.log(max, min);
+    return max - min;
+}
+const newAmplitude = temperatureAmp2([3, 4, 1], [9, 6, 0]);
+console.log(newAmplitude);
